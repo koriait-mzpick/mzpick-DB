@@ -551,10 +551,7 @@ COMMENT = '투표 결과 집계\n';
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mzpick`.`popular_food` (
   `popular_food_number` INT NOT NULL AUTO_INCREMENT COMMENT '리스트 유행 음식 번호',
-  `popular_food_rank` INT NOT NULL COMMENT '유행음식 랭킹',
-  `popular_food_photo_link` TEXT NOT NULL COMMENT '유행 음식 사진 ',
   `popular_food_name` VARCHAR(45) NOT NULL COMMENT '유행 음식 이름',
-  `popular_food_description` TEXT NOT NULL COMMENT '유행 음식 설명',
   PRIMARY KEY (`popular_food_number`))
 ENGINE = InnoDB
 COMMENT = '최신 유행 음식 TOP20\n';
@@ -759,8 +756,8 @@ CREATE TABLE IF NOT EXISTS `mzpick`.`fashion_vote` (
   `fashion_vote_number` INT NOT NULL AUTO_INCREMENT COMMENT '패션 투표 게시글 번호',
   `user_id` VARCHAR(20) NOT NULL COMMENT '투표 작성자 아이디',
   `fashion_vote_title` VARCHAR(45) NOT NULL COMMENT '패션 투표 제목',
-  `fashion_vote_photo_1` TEXT NOT NULL COMMENT '패션 투표 사진1',
-  `fashion_vote_photo_2` TEXT NOT NULL COMMENT '패션 투표 사진 2',
+  `fashion_vote_photo_1` TEXT NULL COMMENT '패션 투표 사진1',
+  `fashion_vote_photo_2` TEXT NULL COMMENT '패션 투표 사진 2',
   `fashion_vote_choice_1` VARCHAR(50) NOT NULL COMMENT '패션 투표 선택항목 1',
   `fashion_vote_choice_2` VARCHAR(45) NOT NULL COMMENT '패션 투표 선택항목 2',
   `fashion_vote_date` DATE NOT NULL COMMENT '패션 투표 날짜',
